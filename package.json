@@ -12,6 +12,9 @@
     "netlify",
     "express.js"
   ],
+  "engines": {
+    "node": "14.x"
+  },  
   "dependencies": {
     "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6"
@@ -23,5 +26,9 @@
     "pug": "^2.0.4",
     "pug-cli": "^1.0.0-alpha6",
     "serverless-http": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/copsneakers/copsneakers.com"
   }
 }
