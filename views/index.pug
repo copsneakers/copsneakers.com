@@ -1,0 +1,12 @@
+extends partials/header
+
+block content
+  // Begin page content
+  main.container(role='main')
+    .row.align-items-center.justify-content-center
+      .col.text-center
+        h1.mt-5.mb-4 Welcome to CopSneakers.com
+        p.lead.mb-4 Your premier destination for the latest sneaker news, history, and releases.
+        a.btn.btn-primary(href='/releases') View Releases
+    // Add additional sections or content as needed
+  include partials/footer

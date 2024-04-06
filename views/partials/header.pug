@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+  link(rel='icon' href='/docs/4.0/assets/img/favicons/favicon.ico')
+  title #{title}
+  link(rel='canonical' href='https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/')
+  // Bootstrap core CSS
+  link(href='https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css' rel='stylesheet')
+  // Custom styles for this template
+  link(href='https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/sticky-footer-navbar.css' rel='stylesheet')
+  script.
+    document.addEventListener("DOMContentLoaded", function() {
+      const currentUrl = window.location.pathname;
+      const navLinks = document.querySelectorAll('.nav-link');
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === currentUrl) {
+          link.classList.add('active');
+        }
+      });
+    });
+  body
+    header
+      // Fixed navbar
+      nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark
+        a.navbar-brand(href='/')
+          img.navbar-logo(src='/logo.png' alt='CopSneakers Logo' style='max-height: 50px') 
+        button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarCollapse' aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarCollapse.collapse.navbar-collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/')
+                | Home 
+                span.sr-only (current)
+          ul.navbar-nav.ml-auto
+            li.nav-item 
+              a.nav-link(href='/about') About
+            li.nav-item
+              a.nav-link(href='https://tiktok.com/@copsneakers.com') TikTok
+            li.nav-item
+              a.nav-link(href='https://x.com/copsneakers_com') X/Twitter
+    block content
